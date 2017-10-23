@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<form action='http://localhost:8080/' method='post' enctype='multipart/form-data'>
+		<input type='file' name='file'>
+		<input type='text' name='userName'>
+		<button  type='submit'>提交</button>
+	</form>
+</body>
+</html>
+
+<!--
+1、form 设置 enctype='multipart/form-data'
+2、安装multer  cnpm install multer
+3、生成multer对象。 如 ： var objMulter = multer();
+4、
+var objMulter = multer({
+	dest : './www/upload'		//写入磁盘的路径,还可以限制上传文件的大小
+});
+5、重命名 （重命名用到 fs 和 path 中间件）
+server.post('/', function(req, res){ 
+	var newName = req.files[0].path + pathLib.parse(req.files[0].originalname).ext;
+	fs.rename( req.files[0].path, newName, function(err){
+		if (err) {
+			res.send('上传失败');
+		}else{
+			res.send('上传成功');
+		}
+	});
+});
+-->

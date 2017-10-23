@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<p>user : <input id='user' type='text'></p>
+	<p>pass : <input id='pass' type='password'></p>
+	<p><button id='delun' value='登陆'>登陆</button><button id='zhuce' value='注册'>注册</button></p>
+	<script src="http://ossweb-img.qq.com/images/js/zepto/zepto1.2.min.js"></script> 
+	<script>
+
+		$('#zhuce').on('click', function(){
+
+			var user = $('#user').get(0).value;
+			var pass = $('#pass').get(0).value;
+
+			$.ajax({
+				url : '/user',
+				data : {
+					act : 'zhuce',
+					user : user,
+					pass : pass
+				},
+				type : 'get',
+				success : function(data){
+					console.log(data);
+				},
+				error : function(e){
+					console.log(e);
+				}	
+
+			});
+
+		});
+
+		$('#delun').on('click', function(){
+
+			var user = $('#user').get(0).value;
+			var pass = $('#pass').get(0).value;
+
+			$.ajax({
+				url : '/user',
+				data : {
+					act : 'denlun',
+					user : user,
+					pass : pass
+				},
+				type : 'get',
+				success : function(data){
+					console.log(data);
+				},
+				error : function(e){
+					console.log(e);
+				}	
+
+			});
+
+		});
+
+	</script>
+</body>
+</html>

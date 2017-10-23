@@ -1,0 +1,26 @@
+exports		一次导出一个数据。如 ： exports.a = 123
+module.exports	一次导出多个数据。如 ：
+
+module.exports = {
+
+	a : 1,
+	b : 2,
+	c : 3
+}
+
+require		导入自己写的模块时，需要./xxxx 用于区别是系统模块还是自己写的模块（./当前目录的意思）
+		或者新建一个文件夹为node_modules文件夹，把自己写的模块丢进去。这样就不用写./
+		
+require模块的时候，可以省略后面的.js。因为node.js都是用javascript来写的
+
+
+npm简介
+
+npm ： NodeJS Package Mannager
+
+npm作用
+1、统一下载途径
+2、自动下载依赖
+3、https://www.npmjs.com/ 这个网站能下载很多别人写好的模块
+4、自己写的模块可是上传到https://www.npmjs.com/（具体方法看视频）
+	

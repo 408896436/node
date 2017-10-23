@@ -1,0 +1,3 @@
+res.clearCookie('name')  //É¾³ýcookie
+		
+delete req.session	//É¾³ýsession

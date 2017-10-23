@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="gbk">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+	<title>Document</title>
+	<script>
+	var w = document.documentElement.clientWidth || document.body.clientWidth;
+	document.documentElement.style.fontSize = (w/750*100)+"px";		
+	window.onresize = function()
+	{
+		var w = document.documentElement.clientWidth || document.body.clientWidth;
+		document.documentElement.style.fontSize = (w/750*100)+"px";		
+	}
+</script>
+	<style type="text/css">
+	html,body{background: #000;}
+	.tcbox{width: 6.77rem; height: 6.16rem; background: url('ossweb-img/tcbg.png') no-repeat 0 0; background-size: 6.77rem; position: absolute; left: 50%; top: 50%; margin-left: -3.385rem; margin-top: -3.08rem; font-size: 0.38rem; text-align: center; font-family: '微软雅黑'; font-weight: bold;}
+	.tcbox li{margin-top: 0.33rem;}
+	.tcbox ul{overflow: hidden; margin-top: 1.5rem; background-image: -webkit-gradient(linear, 0 0, 0 bottom, from(rgba(248, 193, 129, 1)), to(rgba(246, 233, 170, 1)));-webkit-text-fill-color: transparent;-webkit-background-clip: text;}
+	.tcbox ul :nth-child(2){font-size: 0.42rem;}
+	.tcbox .close{width: 0.54rem; height: 0.54rem; top: 0.6rem; right: 0.5rem; text-indent: -9999px; overflow: hidden;}
+	</style>
+</head>
+<body>
+	<div class='tcbox'>
+		<ul>
+			<li>报名后关注</li>
+			<li>“艺龙旅行网”微信公众号，</li>
+			<li>回复“王者荣耀”即可参与抽奖~</li>
+		</ul>
+		<a class='close' href="javascript:hideTc('msgtc1')" title='关闭'>×</a>
+	</div>
+</body>
+</html>

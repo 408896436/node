@@ -1,0 +1,16 @@
+doctype
+html
+	head
+		meta(charset='utf-8')
+		title jade测试页面
+		style.
+			div{width:100px; height:100px; text-align:center; line-height:100px;}
+			.odd{background:yellow; color:pink;}
+			.even{background:pink; color:yellow;}
+		body
+			-var a=0;
+			while a<10
+				if a%2==0
+					div.odd #{a++}
+				else
+					div.even #{a++}
